@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<head>
+    <title>user access management</title>
+    <style>
+        *{
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+         width: 100%;
+        min-height:100vh ;
+           background:linear-gradient(to right,#f0f4f8, #d9e2ec);
+           padding: 60px;
+
+        }
+        h2{
+            text-align: center;
+            color:blueviolet;
+            margin-bottom: 43px;
+        }
+        .form-group{
+            display: flex;
+            flex-grow: 1;
+            flex-direction:column;
+            row-gap:2px;
+            margin-bottom: 4px;
+
+        }
+        label{
+            font-size: 20px;
+            font-weight:bold;
+            color: gray;
+        }
+        .main{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            
+            column-gap: 15px;
+            justify-content: space-between;
+        }
+        .required span {color: red;
+            padding-left: 2px;
+
+        }
+        input[type="text"], select,input[type="date"] {
+            width: 100%;
+
+            padding:8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="text"]:focus{
+            border: 1px solid blueviolet;
+        }
+        input[type="text"]:disabled{
+            cursor: not-allowed;
+        }
+        .button-group{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            column-gap: 8px;
+
+        }
+        .button-group button[type="submit"]
+        {
+            background-color: blueviolet;
+            padding: 10px 10px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            width: fit-content;
+
+        }
+        .button-group button[type="button"]
+        {
+            background-color: red;
+            padding: 10px 10px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            width: fit-content;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User access management form(UAM) form</h2>
+        <form class="form">
+            <div class="main">
+            <div class="form-group">
+                <label class="required">First Name<span>*</span></label>
+                <input type="text" required> 
+            </div>
+            <div class="form-group">
+                <label class="required">Last Name<span>*</span></label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>Middle Name</label>
+                <input type="text">
+            </div>
+            </div>
+            <div class="main">
+
+            
+            <div class="form-group">
+                <label>Worker Classification</label>
+                <select>
+                    <option value="choose">Choose</option>
+                    <option value="Fulltime">Full Time</option>
+                    <option value="Consultant">Consultant</option>
+                    <option value="Part time">Part Time</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label>Consulting Company Name</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label class="required">Engagement End Date<span>*</span><label>
+                <input type="date" required>
+            </div>
+            </div>
+            <div class="main">
+                <div class="form-group">
+                    <label class="required">Department<span>*</span></label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label class="required">Job Tittle<span>*</span></label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Site</label>
+                    <input type="text">
+                </div>
+            </div>
+                    <div class="main">
+                        <div class="form-group">
+                            <label class="required">EP Menu Information<span>*</span></label>
+                            <select id="selectedauth" required >
+                                <option value="choose">Choose</option>
+                               <option value="Authorized">Authorized</option>
+                               <option value="UnAuthorized">UnAuthorized</option>
+                                </select>
+                        </div>          
+                    </div>
+                    <div class="main">
+                        <div class="form-group">
+                            <label class="required">Manager First Name<span>*</span></label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Manager Last Name<span>*</span></label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="form-group">
+                            <label class="required">User id<span>*</span></label>
+                            <input type="text" Disabled placeholder="will be autogenerated">
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Email Address<span>*</span></label>
+                            <input type="text" disabled placeholder="will be autogenerated">
+                        </div>
+                        <div class="form-group">
+                            <label>PDPS110 4 Digit  Code </label>
+                            <input type="text" disabled placeholder="will be autogenerated">
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="form-group">
+                            <label class="required">Paymaster initials<span>*</span></label>
+                            <input type="text" disabled placeholder="will be autogenerated">
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Oracle Person Number<span>*</span></label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+            
+                    <div class="button-group">
+                        <button type="button">Edit</button>
+                            <button type="submit">Save</button>
+                        <button type="submit">Create user account</button>
+                        <button type="submit">Disable user account</button>
+                 
+
+                    </div>
+        </form>
+        
+    </div>
+</body>
+</html>
