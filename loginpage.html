@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>login page for user access management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page for User Access Management</title>
     <style>
         body {
             display: flex;
@@ -29,24 +32,26 @@
         .form-group input {
             width: 100%;
             padding: 10px;
-            border: 1px solid black ;
+            border: 1px solid black;
             border-radius: 4px;
             box-sizing: border-box;
         }
         .form-group input:focus {
-    border-color: #4CAF50;
-    outline: none;
-         }
+            border-color: #4CAF50;
+            outline: none;
+        }
         .submit-btn {
             width: 100%;
             padding: 10px;
-           background-color: green;
+            background-color: green;
             font-size: 16px;
             cursor: pointer;
             border-radius: 4px;
+            color: white;
+            border: none;
         }
         .submit-btn:hover {
-            color: green;
+            background-color: darkgreen;
         }
     </style>
 </head>
@@ -54,8 +59,7 @@
 
     <div class="login-container">
         <h2>Login</h2>
-        <form action="/index.html" method="POST">
-            <!-- <form action="index.html" method="GET"></form> -->
+        <form action="/" method="GET">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -64,11 +68,9 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-           <!-- <input type="submit" class="submit-btn" value="Login"> -->
-           <button class="submit-btn" ><a href="index.html" style="text-decoration: none;color: aliceblue;">Login</a></button>
+            <button type="submit" class="submit-btn">Login</button>
         </form>
     </div>
 
 </body>
-
 </html>
